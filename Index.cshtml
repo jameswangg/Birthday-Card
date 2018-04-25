@@ -1,0 +1,48 @@
+﻿@model BirthdayCard.Models.GuestResponse
+@{
+                /**/
+
+                Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        .btn a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h2>Birthday Card</h2>
+        <div class="btn btn-success">
+                @Html.ActionLink("Send Card", "Index")
+            </div>
+    </div>
+</body>
+</html>
+
+@using (Html.BeginForm())
+{
+    <p>From: @Html.TextBoxFor(t => t.From)</p>
+    <p>To: @Html.TextBoxFor(t => t.To)</p>
+    <p>Message: @Html.TextBoxFor(t => t.Message)</p>
+
+
+    
+
+    <input type="submit" value="Send Card" />
+
+}
+

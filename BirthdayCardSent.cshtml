@@ -1,0 +1,28 @@
+﻿@model BirthdayCard.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<h1>Birthday Card Sent</h1>
+
+@using (Html.BeginForm())
+{
+    <p>From: @Html.TextBoxFor(t => t.From)</p>
+    <p>To: @Html.TextBoxFor(t => t.To)</p>
+    <p>Message: @Html.TextBoxFor(t => t.Message)</p>
+
+}
+
+@*<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>BirthdayCardSent</title>
+    </head>
+    <body>
+        <div>
+        </div>
+    </body>
+    </html>*@
